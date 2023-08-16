@@ -2,8 +2,7 @@ package com.userService.user_service.Controller;
 
 import com.userService.user_service.Entities.User;
 import com.userService.user_service.Exception.UserNotFoundExceptions;
-import com.userService.user_service.Service.Impl.UserServiceImpl;
-import com.userService.user_service.Service.UserService;
+import com.userService.user_service.Service.UserImpl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

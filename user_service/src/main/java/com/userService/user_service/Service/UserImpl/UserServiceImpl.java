@@ -1,4 +1,4 @@
-package com.userService.user_service.Service.Impl;
+package com.userService.user_service.Service.UserImpl;
 
 import com.userService.user_service.Entities.Hotel;
 import com.userService.user_service.Entities.Rating;
@@ -13,7 +13,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
@@ -48,7 +47,7 @@ public class UserServiceImpl implements UserService{
 
             List<Rating> ratingList=ratings.stream().map(rating -> {
             //url localhost:8093/hotel/findHotelById/7679bec2-9ace-46a7-b754-df0a31a1a469
-               ResponseEntity<Hotel> forEntity= restTemplate.getForEntity("http://HOTEL-SERVICE/hotel/findHotelById/"+rating.getHotelId(), Hotel.class);
+                ResponseEntity<Hotel> forEntity= restTemplate.getForEntity("http://HOTEL-SERVICE/hotel/findHotelById/"+rating.getHotelId(), Hotel.class);
                 Hotel hotel=forEntity.getBody();
                 rating.setHotel(hotel);
                 return rating;

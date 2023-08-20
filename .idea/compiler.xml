@@ -11,9 +11,12 @@
         <module name="HotelService" />
         <module name="ServiceRegistry" />
         <module name="ratingService" />
+        <module name="ApiGateWay" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="ApiGateway" target="17" />
+      <module name="ApiGateWay" target="17" />
       <module name="eurekaRegistryService" target="17" />
       <module name="HotelService" target="17" />
       <module name="ratingService" target="17" />
@@ -23,6 +26,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ApiGateWay" options="-parameters" />
+      <module name="ApiGateway" options="-parameters" />
       <module name="HotelService" options="-parameters" />
       <module name="ServiceRegistry" options="-parameters" />
       <module name="eurekaRegistryService" options="-parameters" />
